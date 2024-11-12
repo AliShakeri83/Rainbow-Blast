@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    overflow: hidden;
+}
+.button {
+    position: relative;
+    padding: 200px 400px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 100px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.button:active {
+    transform: scale(0.95);
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFD700;
+    animation: explode 1s ease-out forwards;
+    pointer-events: none;
+}
+@keyframes explode {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
